@@ -1,0 +1,31 @@
+[package]
+name = "tetris"
+version = "0.1.0"
+edition = "2018"
+
+#[profile.dev]
+#panic = "abort"
+
+#[profile.release]
+#panic = "abort"
+
+[lib]
+name = "tetris"
+test = false
+bench = false
+
+[[bin]]
+name = "tetris"
+test = false
+bench = false
+
+[dependencies]
+bootloader = "0.9.8"
+volatile = "0.2.6"
+spin = "0.5.2"
+x86_64 = "0.14.10"
+pic8259 = "0.10.1"
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
